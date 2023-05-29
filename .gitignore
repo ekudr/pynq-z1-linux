@@ -19,4 +19,5 @@ project-spec/meta-plnx-generated/recipes-bsp/u-boot/u-boot-xlnx_%.bbappend
 project-spec/meta-plnx-generated/recipes-kernel/linux/linux-xlnx_%.bbappend
 */*/*/*/*/subdir.mk
 */*/*/.cproject
-
+project-spec/hw-description/system.xsa
+hardware/
