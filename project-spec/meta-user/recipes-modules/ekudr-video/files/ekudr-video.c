@@ -213,11 +213,11 @@ error1:
 static int ekudr_video_remove(struct platform_device *pdev)
 {
 	struct device *dev = &pdev->dev;
-	struct pynq_z1_video_local *lp = dev_get_drvdata(dev);
-	free_irq(lp->irq, lp);
-	iounmap(lp->base_addr);
-	release_mem_region(lp->mem_start, lp->mem_end - lp->mem_start + 1);
-	kfree(lp);
+	struct ekudr_video_device *ekvideo = dev_get_drvdata(dev);
+//	free_irq(lp->irq, lp);
+//	iounmap(lp->base_addr);
+//	release_mem_region(lp->mem_start, lp->mem_end - lp->mem_start + 1);
+	kfree(ekvideo);
 	dev_set_drvdata(dev, NULL);
 	return 0;
 }
